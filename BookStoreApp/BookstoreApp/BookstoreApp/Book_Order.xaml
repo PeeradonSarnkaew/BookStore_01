@@ -1,0 +1,54 @@
+﻿<Window x:Class="BookstoreApp.Book_Order"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BookstoreApp"
+        mc:Ignorable="d"
+        Title="Book_Order" Height="757.2" Width="904.4">
+    <Grid Background="#FFFFEFE7" Margin="0,0,0,-19.8" HorizontalAlignment="Left" Width="894">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="515*"/>
+            <ColumnDefinition Width="378*"/>
+        </Grid.ColumnDefinitions>
+        <GroupBox x:Name="groupBox_Copy" Header="&#xD;&#xA;Payment" HorizontalAlignment="Left" Height="215" Margin="8,55,0,0" VerticalAlignment="Top" Width="361" Grid.Column="1" FontSize="16" FontWeight="Bold">
+            <GroupBox.Background>
+                <SolidColorBrush Color="#FFF1D2A5" Opacity="0.5"/>
+            </GroupBox.Background>
+        </GroupBox>
+
+        <GroupBox x:Name="groupBox" Header="&#xD;&#xA;Book Details" HorizontalAlignment="Left" Height="220" Margin="10,50,0,0" VerticalAlignment="Top" Width="507" Grid.ColumnSpan="2" FontSize="16" FontWeight="Bold">
+            <GroupBox.Background>
+                <SolidColorBrush Color="#FFF5D8D8" Opacity="0.5"/>
+            </GroupBox.Background>
+        </GroupBox>
+        <ComboBox x:Name="cbbidbook" HorizontalAlignment="Left" Margin="140,123,0,0" VerticalAlignment="Top" Width="175" SelectionChanged="cbbidbook_SelectionChanged" Height="24"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="29,130,0,0" TextWrapping="Wrap" Text="เลขประจำตัวหนังสือ :" VerticalAlignment="Top" Height="16" Width="106" FontSize="14"/>
+        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="47.1,117,0,0" TextWrapping="Wrap" Text="เลขประจำตัวลูกค้า :" VerticalAlignment="Top" Height="20" Width="99" Grid.Column="1" FontSize="14"/>
+        <ComboBox x:Name="cbbidcus" HorizontalAlignment="Left" Margin="167.1,112,0,0" VerticalAlignment="Top" Width="174" Height="27" Grid.Column="1"/>
+        <TextBox x:Name="txtunit" HorizontalAlignment="Left" Height="25" Margin="167.1,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="56" Grid.Column="1"/>
+        <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Margin="44,172,0,0" TextWrapping="Wrap" Text="จำนวนหนังสือที่ซื้อ :" VerticalAlignment="Top" Height="18" Width="102" Grid.Column="1" FontSize="14"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="47,202,0,0" TextWrapping="Wrap" Text="ราคารวม :" VerticalAlignment="Top" FontSize="14" Height="23" Width="71" Grid.Column="1"/>
+        <TextBlock x:Name="txtbtotleprice" HorizontalAlignment="Left" Margin="167,202,0,0" TextWrapping="Wrap" Text="00000" VerticalAlignment="Top" Width="56" FontSize="14" Height="23" Grid.Column="1"/>
+        <TextBlock x:Name="textBlock1_Copy1" HorizontalAlignment="Left" Margin="238,202,0,0" TextWrapping="Wrap" Text="บาท " VerticalAlignment="Top" RenderTransformOrigin="-0.59,0.564" FontSize="14" Height="23" Width="32" Grid.Column="1"/>
+        <Button x:Name="btncalculate" Content="Buy" HorizontalAlignment="Left" Margin="290,223,0,0" VerticalAlignment="Top" Width="64" Height="36" Click="btncalculate_Click" FontSize="22" Grid.Column="1">
+            <Button.Background>
+                <SolidColorBrush Color="#FFFF8865" Opacity="0.5"/>
+            </Button.Background>
+        </Button>
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Height="446" Margin="10,275,0,0" VerticalAlignment="Top" Width="874" IsTabStop="True" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="textBlock1_Copy2" HorizontalAlignment="Left" Margin="213,234,0,0" TextWrapping="Wrap" Text="บาท " VerticalAlignment="Top" Height="20" Width="25" FontSize="14"/>
+        <TextBlock x:Name="textBlock1_Copy3" HorizontalAlignment="Left" Margin="73,234,0,0" TextWrapping="Wrap" Text="ราคา :" VerticalAlignment="Top" Height="20" Width="32" FontSize="14"/>
+        <TextBlock x:Name="txtbprice" HorizontalAlignment="Left" Margin="112,234,0,0" TextWrapping="Wrap" Text="00000" VerticalAlignment="Top" Width="82" Height="20" FontSize="14"/>
+        <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" Margin="77,169,0,0" TextWrapping="Wrap" Text="ชื่อหนังสือ :" VerticalAlignment="Top" Height="16" Width="57" FontSize="14"/>
+        <TextBlock x:Name="txtnamebook" HorizontalAlignment="Left" Margin="140,169,0,0" TextWrapping="Wrap" Text="........................." VerticalAlignment="Top" Width="269" Height="16" FontSize="14"/>
+        <TextBlock x:Name="textBlock_Copy3" HorizontalAlignment="Left" Margin="72,208,0,0" TextWrapping="Wrap" Text="รายละเอียด :" VerticalAlignment="Top" Height="17" Width="63" FontSize="14"/>
+        <TextBlock x:Name="txtdetail" HorizontalAlignment="Left" Margin="140,208,0,0" TextWrapping="Wrap" Text="............." VerticalAlignment="Top" Width="269" Height="21" FontSize="14"/>
+        <TextBlock x:Name="textBlock1_Copy4" HorizontalAlignment="Left" Margin="238,172,0,0" TextWrapping="Wrap" Text="เล่ม" VerticalAlignment="Top" Height="18" Width="63" Grid.Column="1" FontSize="14"/>
+        <Button x:Name="Back" Content="Back" HorizontalAlignment="Left" Margin="243,23,0,0" VerticalAlignment="Top" Width="125" Height="27" Click="button_Click" Grid.Column="1">
+            <Button.Background>
+                <SolidColorBrush Color="#FFAFF999" Opacity="0.5"/>
+            </Button.Background>
+        </Button>
+    </Grid>
+</Window>
